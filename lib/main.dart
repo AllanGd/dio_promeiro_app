@@ -118,10 +118,19 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            ElevatedButton(
-                onPressed: _decrementCounter, child: const Icon(Icons.remove)),
-            ElevatedButton(
-                onPressed: _incrementCounter, child: const Icon(Icons.add))
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                    onPressed: _decrementCounter,
+                    child: const Icon(Icons.remove)),
+                const SizedBox(
+                  width: 20,
+                ),
+                ElevatedButton(
+                    onPressed: _incrementCounter, child: const Icon(Icons.add)),
+              ],
+            )
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
